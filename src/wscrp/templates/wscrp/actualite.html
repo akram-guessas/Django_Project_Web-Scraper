@@ -1,0 +1,40 @@
+{% extends 'wscrp/base.html' %}
+
+{% block content %}
+<div style="background-image: url('static/wscrp/images/butterfly-3054736_1920.jpg');">
+    <form class="card mb-3" style="background-color: bisque;"></form>
+        <h1>Bloc des articles</h1>
+    </form>
+</div>
+{% for post in posts %}
+<div class="border p-3 mb-3" style="background-color: white;">
+    <img class="img-fluid rounded-circle border m-2" style="width: 50px; height:50px;"
+        src="static\wscrp\images\test.png" alt="photo de l'éditeur">
+    <!--<span class="text-black"><b>Publié dans</b> 
+        {{post.post_date}}</span>-->
+    <h1 class="entry-title text-danger" > Titre d'article
+        :</h1>
+    <h1><p style="color: blueviolet;">Liberté{{post.count}}:{{post.title}}</p></h1>
+    <h3><a class="text-dark" href="#"> Lien de l'article:</a></h3>
+    <a href="{{post.link}}"><h3>{{post.link}}</h3></a>
+    <h1><p style="color: blueviolet;">Elwatan{{post.count}}:{{post.title1}}</p></h1>
+    <h3><a class="text-dark" href="#"> Lien de l'article:</a></h3>
+    <a href="{{post.link1}}"><h3>{{post.link1}}</h3></a>
+    <h1><p style="color: blueviolet;">APS{{post.count}}:{{post.title2}}</p></h1>
+    <h3><a class="text-dark" href="#"> Lien de l'article:</a></h3>
+    <a href="{{post.link2}}"><h3>{{post.link2}}</h3></a>
+    <h1><p style="color: blueviolet;">TSA{{post.count}}:{{post.title3}}</p></h1>
+    <h3><a class="text-dark" href="#"> Lien de l'article:</a></h3>
+    <a href="{{post.link3}}"><h3>{{post.link3}}</h3></a>
+    <p>{{post.content}}</p>
+    <!--<a href="https://www.liberte-algerie.com{{post.link}}"><h3>https://www.liberte-algerie.com{{post.link}}</h3></a>-->  
+    <!--<a href="{{post.link}}"><h3>{{post.link}}</h3></a>-->  
+</div>
+{% empty %}
+<div class="border p-3 mb-3" style="background-color: white;">
+    <h3 >Il n'y a pas de messages, si vous avez déjà un compte déjà enregistré <a href="#">s'identifier</a> Et poster le premier article
+       </h3>
+</div>
+{% endfor %}
+
+{% endblock content %}

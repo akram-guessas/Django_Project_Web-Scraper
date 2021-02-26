@@ -1,0 +1,295 @@
+{% load static%}
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title >W SCRAPER </title>
+    {% endif %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/wscrp/css/main.css">
+    <link rel="shortcut icon" href="{% static 'wscrp/images/logo_wsrp.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <header>
+            <section id="a1">
+                 <!--Start Navbar-->
+              
+            <nav class="navbar navbar-expand-lg navbar-lightm-0 p-0 z2" >
+                
+                <a class="navbar-brand " href="{% url 'home' %}" style="color: white;"><img class="img-fluid rounded-circle border m-2" src="{% static 'wscrp/images/logo_wsrp.ico' %}" style="width: 40px; height:40px;" alt="logo" width="30px">
+                    W SCRAPER</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" >
+                            <a class="nav-link text-secondary  mb-2 pt-2" href="{% url 'home' %}"><font style="vertical-align: inherit;
+                                color: white;">Accueil </font> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown" > 
+                            <a class="nav-link dropdown-toggle mb-2 pt-2" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="vertical-align: inherit;
+                                color: white;">
+                                <font style="vertical-align: inherit;">Journaux  </font>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="https://www.liberte-algerie.com">Liberté</a>
+                                <a class="dropdown-item" href="https://www.elwatan.com/">Elwatan</a>
+                                <a class="dropdown-item" href="http://www.aps.dz/">APS</a>
+                                <a class="dropdown-item" href="https://www.tsa-algerie.com/">TSA</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-2 pt-2" href="{% url 'about' %}" style="vertical-align: inherit;
+                            color: white;"><font style="vertical-align: inherit;">À propos </font> </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav mr-auto align-right" style="padding: 6px 19px;
+                    font-family: Lucida Console;" >
+                    <li class="nav-item m-2 p-0" > 
+                    <a id="button_login_mobile" href="https://www.123rf.com/login.php">
+                            <button class="btn btn-warning z1 "; type="submit">S'identifier </button>  			
+                    </a></li>
+                    <li class="nav-item m-2 p-0"><a class="header-nav-left header-button-signup  " href="{% url 'register' %}"><button class="btn btn-warning z1 "; type="submit">S’inscrire</button></a>
+                    </li>
+                </ul>
+               
+            </nav>
+            <!--End Navbar-->
+               
+                <section class="hero__content hero__content--centered f1">
+                    <h1 class="hero__title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><b style="font-size: 38px; text-align: center;"><div> Extraction des articles des journaux </div><div>Algeriens avec le Web Scraping.</div></font></font></h1>
+                    <form class="form-inline m-0 p-4 " method="GET" value="https://www.liberte-algerie.com/search/"> 
+                        <button class="btn btn my-2 my-sm-0" type="submit" value="" style="background-color: white;" ><i class="fa fa-search" ></i></button>
+                        <input class="form-control mr-sm-2" style="
+                            max-width: 500px;
+                            width: 500px;" type="search" name="q" value="{{request.GET.q}}" placeholder="Search" aria-label="Search" id="id_q">
+                            
+                    </form>
+                </section>   
+                
+                <style>
+                    #a1{
+                        background-image: url('../static/wscrp/images/backroundse.png');
+                        
+                        height: 500px; 
+                        background-position: center; 
+                        background-repeat: no-repeat;
+                        background-size: cover; 
+                        }
+                      
+                    .z1{
+                        background-color: transparent;
+                        color: #fff;
+                        border: transparent;
+
+                        }
+                    .f1{
+                    margin: 0;
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    /*width: 500px;*/
+                    transform: translate(-50%, -50%);
+                    color: #fff;
+                     
+                    }
+                    
+                    .hero__title {
+                        display: block;
+                        font-size: 36px;
+                        line-height: 48px;
+                        font-weight: 700;
+                        margin-top: 0;
+                        margin-bottom: 15px;}
+
+                   
+                </style>
+            </section>
+    </header>
+    <section class="text-center " style="background-color: #eeeeee;">
+        <div class=" p-3 mb-2 text-white">
+            <div class="row mt-4" >  
+                <div class="col-md-8 text-left left_div ">
+                    {% block content %}
+
+                    {% endblock content %}
+                </div>
+                    <style>
+                        .f2{
+                            width: 150px ;
+                            height:50px;
+                            /*background-color: #72e5f9;*/
+                            background-color: Transparent;
+                            color: #fff;
+                            font-size: 16px;
+                        }
+
+                    </style>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="" style="background-color: #232a34;" >
+       
+        <div class="container-fluid footer" id="layout-footer"  style="margin: 0;
+        top: 70%;
+        left: 70%;
+        /*width: 500px;*/
+        ">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3 p-3" > 
+                        <ul >
+                            <li ><p><font style="vertical-align: inherit;"><font class="" class="text-center " style="vertical-align: inherit;"><h5 style="color: white;"> NOUS CONTACTER</h5></font></font></p></li>
+                             
+                        </ul>
+                        <ul class="smedia p-3">
+                           
+                                <a class="text-secondary" href="#"><i class="fab fa-facebook " style="width: 32; height:32 ;"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-twitter" style="width: 32; height:32 ;"></i></a>
+                            
+                                <a class="text-secondary" href="#"><i class="fab fa-instagram" style="width: 32; height:32 ;"></i></a>
+                           
+                                <a class="text-secondary" href="#"><i class="fab fa-youtube " style="width: 32; height:32 ;"></i></a>
+                           
+                                <a class="text-secondary" href="#"><i class="fab fa-telegram" style="width: 32; height:32 ;"></i></a>
+                            
+                                <a class="text-secondary" href="#"><i class="fab fa-linkedin" style="width: 32; height:32 ;"></i></a>
+                            
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-3 p-3" style="left: 150px;">
+                        <ul>
+                            <li><p><font style="vertical-align: inherit;"><font class="" style="vertical-align: inherit;color: white;"><h5> Des Journaux</h5> </font></font></p></li>
+                            <li>
+                                <a href="/"><font style="vertical-align: inherit;"><font  style="vertical-align: inherit;color:white;"><h6>Liberté </h6></font></font></a>
+                            </li>
+                            <li>
+                                <a href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:white;"><h6>Elwatan</h6></font></font></a>
+                            </li>
+                            <li>
+                                <a href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:white;"><h6>APS</h6></font></font></a>
+                            </li>
+                            <li>
+                                <a href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;color:white;"><h6>TSA</h6></font></font></a>
+                            </li>
+                                                
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-3 p-3" style="left: 250px;" >
+                        <ul>
+                            <li><p><font style="vertical-align: inherit;"><font class=" " style="vertical-align: inherit;"><h5 style="color: white;"> À propos</h5></font></font></p></li>
+                            <li><a href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit; color:white;"><P><b> Brahim Oumansour analyse dans cet entretien la situation en Libye et le risque de son enlisement dans ce conflit. 
+                                Il estime que Haftar</b></P></font></font></a></li>
+                        </ul>
+                    </div>                              
+                </div>
+                <div class="row p-5 ">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copyright © 2020
+                             </font></font><a href="#"><font style="vertical-align: inherit;"><font class="text-secondary" style="vertical-align: inherit;">W Scraper</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> | </font><font style="vertical-align: inherit;">Tous droits réservés  </font></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .footer ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            *, :after, :before {
+                box-sizing: border-box;
+            }
+            ul {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+            }
+            body, html {
+                height: 100%;
+                font-family: Montserrat,sans-serif;
+            }
+            body {
+                font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                line-height: 1.428571429;
+                color: #333;
+                background-color: #fff;
+            }
+        </style>
+        <!--<div class="container-fluid" style="color: white;">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card-group mt-3">
+                        <div class="card m-3" style="background-color: #222831;">
+                            <h3 class="card-title text-center  p-2 m-3">Social media</h3>
+                            <h4 class="card-body text-center">
+                                <a class="text-secondary" href="#"><i class="fab fa-facebook "></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-youtube"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-telegram"></i></a>
+                                <a class="text-secondary" href="#"><i class="fab fa-linkedin"></i></a>
+                                
+                            </h4>
+                    </div>
+                    <div class="card m-3" style="background-color: #222831;">
+                            <h3 class="card-title text-center  p-2 m-3">
+                                Sites importants</h3>
+                            <div class="card-body" > 
+                                <ul >Liberté Elwatan APS TSA
+                                    <li><a class="text-dark" href="#" ><b style="color: white;">Liberté</b></a></li>
+                                    <li><a class="text-dark" href="#"><b style="color: white;">Elwatan</b>
+                                          </a></li>
+                                    <li ><a class="text-dark" href="#" ><b style="color: white;">APS</b></a></li>
+                                    <li><a class="text-dark" href="#"><b style="color: white;">TSA</b></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="card m-3 " style="background-color: #222831;">
+                            <h3 class="card-title text-center p-2 m-3">À propos</h3>
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="{% static 'wscrp/images/mim-logo.ico' %}"  class="img-fluid rounded-circle border m-2" style="width: 70px; height:70px;"  alt="logo">
+                                </div>
+                                <p>
+                                    Brahim Oumansour analyse dans cet entretien la situation en Libye et le risque de son enlisement dans ce conflit. 
+                                    Il estime que Haftar
+
+                            </div>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+            <div class="row p-2">
+                <div class="col-md text-center">
+                    <small class="text-light">&copy;All Rights Reserved 2020 </small>
+                </div>
+            </div>
+        </div>-->
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="{% static 'wscrp/js/fontawesome-all.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'wscrp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="border p-4 mb-5 text-secondary" style="background-color: white;" style="font-size: 14PX;">
+    <legend class="border-bottom pb-1 mb-3">Create account</legend>
+    <form method="POST" style="font-size: 18px;">
+        {% csrf_token %}
+        {{form|crispy}}
+        
+        <input class="btn btn-secondary mt-4" type="submit" value="S'inscrire">
+    </form>
+    <div class="border-top mt-4 pt-2">
+        <small style="color:black; "> Si vous avez un compte <a href="">S'identifier</a></small>
+    </div>
+</div>
+{% endblock content %}

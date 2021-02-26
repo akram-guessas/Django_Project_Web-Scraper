@@ -1,0 +1,69 @@
+{% extends 'wscrp/base.html' %}
+
+{% block content %}
+<div class=" p-3 mb-2 text-white" >
+<div class="row mt-4" >  
+    <div class="col-md-8 text-left left_div  " style="position: relative;bottom: 15px;" >
+        <div class=" border text-center text-secondary p-2 my-3  "  style="background-color: #363636 ;width: 900px;">
+            <form action=""></form>
+                <h1><svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+                    <b class='text-monospace '> Actualité </b></h1>
+            </form>
+        </div>
+        {% for post in posts12 %}
+        <div class=" border text-secondary " style="background-color: #fff;width: 900px;">
+            <form class="form-inline my-2 my-lg-0  " >
+                <dir class="container center_div " >
+                    <a href="{{post.link}}"><button class="btn btn my-3 col-12  my-sm-0 text-white" type="submit" style="background-color: #72e5f9;"><b > {{post.title}} </b></button></a>
+                </dir>
+            </form>
+        </div>
+        {% endfor %}
+        
+    </div>
+    
+    <div class="col-md-4" style="left: 400px;">
+        <div class=" nav-link dropdown-toggle card mb-3 text-monospace  text-secondary" style="background-color: #363636;width: 300px;"  >
+            <h3 class="text-center text-secondary" >Les catégories</h3>
+            <h4  class=" text-center  p-2" ><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Sport"">
+                <button class="btn btn-warning f2 "; type="submit" style="width: 150px ;height:50px;">Sport </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Sant%C3%A9">
+                <button class="btn btn-warning f2 "; type="submit" style="width: 150px ;height:50px;">Santé </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Science">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">Science </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Politique">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">Politique </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Gaming">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;"> Gaming </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Technologie">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;"> Technologie </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Travaux%20publics">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">Travaux publics </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/L'environnement">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">L'environnement </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/M%C3%A9tiers">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">Métiers </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/L'%C3%A9ducation">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">L'éducation </button>  			
+            </a></h4>
+            <h4  class=" text-center p-2"><a id="button_login_mobile" href="https://www.liberte-algerie.com/search/Les%20arts">
+                <button class="btn btn-warning f2"; type="submit" style="width: 150px ;height:50px;">Les arts
+                </button>  			
+            </a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+{% endblock content %}
+    

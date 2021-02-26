@@ -1,0 +1,159 @@
+{% extends 'wscrp/base.html' %}
+
+
+{% block content %}
+
+<div class="center_div" id="cen" style=" width: 1300px;" >
+    <div class=" border text-center text-secondary p-2 my-3  "  style="background-color: #363636 ;">
+        <form class="" action="">
+            <h1><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+                <b class='text-monospace '>Choisir un site </b></h1>
+        </form>
+    </div>
+    <div class=" border text-secondary " style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0  " > 
+            <dir class="container center_div " >
+                <a class="nav-link" href="{% url 'Liberte' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\liberte_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b > Liberté Algérie, Quotidien national d'information </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border p-2 my-2" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'Elwatan' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\elwatan_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9 ; color:#363636;"><b> El Watan.com </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'APS' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\aps_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> Algérie Presse Service </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'TSA' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\TSA_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> TSA__Premier Média Francophpne Algérien Sur Internet </b></button>
+                </a>
+                
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'reflexion' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\reflexion_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> Réflexiondz </b></button>
+                </a>
+                
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'lnr_dz' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\inr_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> La Nouvelle République  </b></button>
+                </a>
+                
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'lesoirdalgerie' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\lesoirdalgerie_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> Le Soir D'ALGERIE </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'lequotidien' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\lequotidien_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b>Le Quotidien d'Oran </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'jeune' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\jeune_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b>Le JEUNE INDEPENDAN </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'elmoudjahid' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\elmoudjahid_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> EL MOUDJAHID </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'dzfoot' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\dzfoot_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> DZFOOT </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'competition' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\competition_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> Compétition .dz </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'capouest' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\capouest_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> Cap Ouest | Votre quotidien d'information </b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+    <div class=" border  p-2 my-3" style="background-color:  #fff;">
+        <form class="form-inline my-2 my-lg-0 "> 
+            <dir class="container center_div ">
+                <a class="nav-link" href="{% url 'bejaia' %}">
+                <img class='img-fluid rounded-circle border m-2' src="static\wscrp\images\bejaia_logo.png" alt="photo de l'éditeur" style="width: 50px; height:50px;">
+                <button class="btn btn col-10 my-3 my-sm-0 text-white" type="submit" style="background-color: #72e5f9; color:#363636;"><b> BEJAIA NEWS</b></button>
+                </a>
+            </dir> 
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
